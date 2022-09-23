@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script>
+			function sendMail() {
+				var tempParams = {
+					from_name: document.getElementById("name").value,
+					to_name: document.getElementById("email").value,
+					message: document.getElementById("message").value,
+				};
+
+				emailjs.send("service_alvmkri", "template_ntbl3qd", tempParams).then(
+					function (response) {
+						console.log("SUCCESS!", response.status, response.text);
+					},
+					function (error) {
+						console.log("FAILED...", error);
+					}
+				);
+			}
+		</script>
+
+		<script type="text/javascript">
+			(function () {
+				emailjs.init("tckFwD3u7saANSQBL");
+			})();
+		</script>
+
+		<title>Document</title>
+	</head>
+
+	<body>
+		<!--Home Section-->
+		<section id="home">
+			<div class="home container">
+				<h1>
+					Hello, I'm <span class="name-tag"> Kaan Ozen.</span>
+					<br />
+					I'm a web developer.
+				</h1>
+			</div>
+
+			<nav id="main-nav">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</section>
+		<!--Home Section End-->
+
+		<!--About Section-->
+		<section id="about" class="section-container">
+			<div class="section-title">
+				<div>
+					<h1>About</h1>
+					<div class="line line-animation"></div>
+				</div>
+			</div>
+
+			<div class="about-body">
+				<div class="about-img">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<img
+									src="/assets/pxArt.png"
+									alt="Paris"
+									style="width: 300px; height: 300px"
+								/>
+							</div>
+							<div class="flip-box-back">
+								<img
+									src="/assets/kaanImg.png"
+									alt="Paris"
+									style="width: 300px; height: 300px"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="about-me">
+						<p>
+							First of all, I love to write code. Software development is like a
+							strategy game. Firstly, you need to analyze the resources you
+							have. After that, start developing a project based on these
+							analyzes. I believe in the power of programming to transform and
+							improve the lives of people around the world. I have been
+							developing software using different project for the last 4 years.
+							I am mainly keen width
+							<mark>HTML, CSS, ReactJS, Javascript and Python.</mark> I have
+							basic knowledge <mark>SQL and C#.</mark>
+						</p>
+					</div>
+				</div>
+
+				<div class="skill-container">
+					<div class="skill">
+						<div class="subject">HTML</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="90%"
+								style="max-width: 90%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">CSS</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="80%"
+								style="max-width: 80%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">Javascript</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="70%"
+								style="max-width: 70%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">Git and GitHub</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="65%"
+								style="max-width: 65%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">ReactJS</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="60%"
+								style="max-width: 60%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">Python</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="60%"
+								style="max-width: 60%"
+							></div>
+						</div>
+					</div>
+
+					<div class="skill">
+						<div class="subject">SQL</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="40%"
+								style="max-width: 40%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">UI Design</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="40%"
+								style="max-width: 40%"
+							></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="subject">Photoshop</div>
+						<div class="progressbar">
+							<div
+								class="progress_line"
+								value="55%"
+								style="max-width: 55%"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--About Section End-->
+
+		<!--Projects Section-->
+		<section id="projects" class="section-container">
+			<div class="section-title">
+				<div>
+					<h1>Projects</h1>
+					<div class="line line-animation"></div>
+				</div>
+			</div>
+
+			<div class="project-container">
+				<div class="card">
+					<p>Project1</p>
+					<p class="info-text">Information</p>
+					<button>Learn More</button>
+				</div>
+				<div class="card">
+					<p>Project1</p>
+					<p class="info-text">Information</p>
+					<button>Learn More</button>
+				</div>
+				<div class="card">
+					<p>Project1</p>
+					<p class="info-text">Information</p>
+					<button>Learn More</button>
+				</div>
+				<div class="card">
+					<p>Project1</p>
+					<p class="info-text">Information</p>
+					<button>Learn More</button>
+				</div>
+				<div class="card">
+					<p>Project1</p>
+					<p class="info-text">Information</p>
+					<button>Learn More</button>
+				</div>
+			</div>
+		</section>
+		<!--Projects Section End-->
+
+		<!--Contacts Section-->
+		<section id="contact" class="section-container">
+			<div class="section-title">
+				<div>
+					<h1>Contact</h1>
+					<div class="line line-animation"></div>
+				</div>
+			</div>
+			<div class="contact-text">
+				<p>
+					Feel free to Contact me by submitting the form below and I will get
+					back to you as soon as possible
+				</p>
+			</div>
+
+			<div class="contact-box">
+				<ul>
+					<form action="">
+						<li>
+							<label for="name">Name</label>
+							<input
+								type="text"
+								id="name"
+								placeholder="Name"
+								required
+								autocomplete="off"
+							/>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="Email"
+								required
+								autocomplete="off"
+							/>
+						</li>
+						<li>
+							<label for="message">Message</label>
+							<textarea
+								id="message"
+								placeholder="Message"
+								id=""
+								cols="30"
+								rows="10"
+								required
+								autocomplete="off"
+							></textarea>
+						</li>
+
+						<button onclick="sendMail()">Send Email</button>
+					</form>
+				</ul>
+			</div>
+		</section>
+		<!--Contacts Section End-->
+
+		<!--Footer Section Start-->
+		<section class="footer">
+			<footer class="footer-container">
+				<div class="footer-body">
+					<div class="footer-text">
+						<h2>Kaan ozen</h2>
+						<p>
+							A Frontend focused Web Developer building the Frontend of Websites
+							and Web Applications that leads to the success of the overall
+							product.
+						</p>
+					</div>
+
+					<div class="footer-links">
+						<p>social</p>
+						<div class="footer-logos">
+							<a href="https://www.linkedin.com/in/kaan-ozen/">
+								<img src="/assets/linkedin.svg" alt="" />
+							</a>
+							<a href="https://github.com/KaanOzen-mF">
+								<img src="/assets/github.svg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-line"></div>
+
+				<div class="footer-feet">
+					<p>
+						©Copyright 2022. Made by <span class="name-tag"> Kaan Ozen.</span>
+					</p>
+				</div>
+			</footer>
+		</section>
+		<!--Footer Section End-->
+
+		<script src="index.js"></script>
+	</body>
+</html>
