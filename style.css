@@ -792,6 +792,10 @@ button:hover {
 	.contact-box {
 		width: 94%;
 	}
+
+	.go-nav {
+		padding-top: 40%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -801,6 +805,22 @@ button:hover {
 	nav a {
 		font-size: 10px;
 		margin-right: 5px;
+	}
+
+	.text-box {
+		width: 300px;
+	}
+
+	.home-text {
+		font-size: 13px;
+	}
+
+	h1 {
+		font-size: 13px;
+	}
+
+	.go-nav {
+		padding-top: 50%;
 	}
 }
 
