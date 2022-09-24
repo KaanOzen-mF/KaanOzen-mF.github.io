@@ -32,10 +32,11 @@ a {
 	cursor: url("assets/cursor.cur"), pointer;
 }
 
-.container {
+.home-container {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -95,12 +96,214 @@ a {
 	position: relative;
 }
 
-.name-tag:hover {
+.go-nav {
+	padding-top: 20%;
+	font-size: 20px;
+	position: absolute;
+}
+.about-me-button {
+	padding: 5px;
+	background-color: black;
+	box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.about-me-button:hover {
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 2px 10px rgba(0, 0, 0, 1);
 	transition: 1s;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 2px;
-	background-color: bisque;
+}
+
+.about-me-button a {
+	color: #3f3;
+	text-decoration: none;
+	margin: 0px 10px;
+	font-size: 20px;
+	animation: button-blink 2s infinite;
+}
+
+.about-me-button a:hover {
+	text-decoration: none;
+	margin: 0px 10px;
+	font-size: 20px;
+	animation: none;
+	transition: 0.5s;
+}
+
+@keyframes button-blink {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.8;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.text-box {
+	border: 4px solid black;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: aliceblue;
+	background-color: black;
+	box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.8);
+	position: relative;
+	width: 400px;
+}
+
+.pixelCon {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.pixel {
+	width: 25%;
+	height: 20%;
+	padding-top: 10%;
+	float: left;
+	opacity: 0;
+	animation: blink 6s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.3;
+		background-color: #efdc43;
+		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+	}
+	50% {
+		opacity: 0.3;
+		background-color: #6251ca;
+		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+	}
+
+	75% {
+		opacity: 0.3;
+		background-color: #f8251b;
+		box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+		-moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.8) inset;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes typed {
+	0%,
+	2.1635021645% {
+		content: "K";
+	}
+	2.1645021645%,
+	4.328004329% {
+		content: "Ka";
+	}
+	4.329004329%,
+	6.4925064935% {
+		content: "Kaa";
+	}
+	6.4935064935%,
+	8.657008658% {
+		content: "Kaan";
+	}
+	8.658008658%,
+	10.8215108225% {
+		content: "Kaan ";
+	}
+	10.8225108225%,
+	12.986012987% {
+		content: "Kaan O";
+	}
+	12.987012987%,
+	15.1505151515% {
+		content: "Kaan Oz";
+	}
+	15.1515151515%,
+	17.315017316% {
+		content: "Kaan Oze";
+	}
+	17.316017316%,
+	64.5011645022% {
+		content: "Kaan Ozen";
+	}
+	64.5021645022%,
+	66.2327662338% {
+		content: "Kaan Oze";
+	}
+	66.2337662338%,
+	67.9643679654% {
+		content: "Kaan Oz";
+	}
+	67.9653679654%,
+	69.695969697% {
+		content: "Kaan O";
+	}
+	69.696969697%,
+	71.4275714286% {
+		content: "Kaan ";
+	}
+	71.4285714286%,
+	73.1591731602% {
+		content: "Kaan";
+	}
+	73.1601731602%,
+	74.8907748918% {
+		content: "Kaa";
+	}
+	74.8917748918%,
+	76.6223766234% {
+		content: "Ka";
+	}
+	76.6233766234%,
+	78.353978355% {
+		content: "K";
+	}
+	78.354978355%,
+	100% {
+		content: "​";
+	}
+}
+
+.home-text {
+	font-size: 18px;
+	line-height: 32px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #3f3;
+}
+
+.home-text::after {
+	content: "​";
+	padding-right: 3px;
+	padding-right: calc(3px + 0.1vw);
+	border-right: 10px solid rgba(51, 255, 51, 0.75);
+	border-right: calc(1.1vw + 4px) solid rgba(51, 255, 51, 0.75);
+	text-shadow: 0 0 5px rgba(51, 255, 51, 0.75);
+	white-space: nowrap;
+	animation: typed 4.62s linear 1s infinite, beam-blink 1s infinite;
 }
 
 #main-nav {
@@ -129,7 +332,7 @@ nav a {
 nav a:hover {
 	text-decoration: underline;
 	color: #04aa6d;
-	transition: 0.2s;
+	transition: 1s;
 }
 
 #main-nav.sticky {
@@ -214,6 +417,8 @@ nav a:hover {
 .about-me {
 	padding: 18px;
 	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: lighter;
 }
 .skill-container {
 	display: grid;
