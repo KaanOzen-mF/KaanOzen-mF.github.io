@@ -319,8 +319,11 @@ a {
 	-webkit-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.85);
 	-moz-box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.85);
 	display: flex;
+	z-index: 999;
 }
+/* Home Section */
 
+/* Nav Section */
 nav a {
 	color: white;
 	text-decoration: none;
@@ -344,7 +347,7 @@ nav a:hover {
 	padding-top: 45px;
 }
 
-/* Home Section */
+/* Nav Section */
 
 /* About Section*/
 #about {
@@ -372,6 +375,9 @@ nav a:hover {
 	border-radius: 200px;
 	border: 1px solid #000000;
 	background-color: #04aa6d;
+	box-shadow: 0px 0px 41px 10px rgba(0, 0, 0, 0.65);
+	-webkit-box-shadow: 0px 0px 41px 10px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 0px 0px 41px 10px rgba(0, 0, 0, 0.65);
 }
 
 .flip-box {
@@ -420,79 +426,73 @@ nav a:hover {
 	font-size: 14px;
 	font-weight: lighter;
 }
-.skill-container {
+
+.about-me mark {
+	color: #000000;
+	background-color: #04aa6d;
+	font-size: 16px;
+	font-style: oblique;
+	animation: button-blink 2s infinite;
+}
+
+#skill-section {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 50px 80px;
 	padding-right: 20px;
 	padding-bottom: 30px;
+	text-align: center;
 }
 
-.subject {
-	font-weight: thin;
-	color: #787cb5;
-	padding-bottom: 5px;
-	text-transform: uppercase;
+.skill-container {
+	width: 60%;
+	margin: 20px auto;
+	margin-bottom: 100px;
+	padding: 10px;
 }
 
-.progressbar {
+.skill-container p {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.progress {
 	width: 100%;
-	height: 16px;
-	background-color: #fff;
-	position: static;
-	padding: 4px 6px;
-	border-bottom: 1px solid #444;
-	border-radius: 15px;
+	height: 36px;
+	background: rgb(196, 196, 196);
+	background: linear-gradient(
+		90deg,
+		rgba(196, 196, 196, 1) 0%,
+		rgba(100, 100, 100, 1) 100%
+	);
+
+	border-radius: 10px;
 }
 
-.progress_line {
-	position: relative;
+.progress .progress-bar {
 	width: 0%;
-	height: 100%;
-	background-color: #04aa6d;
-	border-radius: 15px;
-	animation: animate1 1.2s cubic-bezier(1, 0, 0.4, 1) forwards;
-}
-
-@keyframes animate1 {
-	100% {
-		width: 100%;
-	}
-}
-.progress_line::after {
-	position: absolute;
-	content: attr(value);
-	top: -50px;
-	right: 0px;
-	transform: translateX(50%);
-	box-shadow: inset 2px -2px 2px #000000, inset -2px 2px 2px #2d2d2d;
-	padding: 6px 8px;
-	border-radius: 5px;
-	color: #787cb5;
-}
-
-.progress_line::before {
-	position: absolute;
-	content: "";
-	border-width: 6px;
-	border-style: solid;
-	border-color: #787cb5 transparent transparent transparent;
-	top: -17px;
-	right: 0px;
-	transform: translateX(50%);
-}
-
-.progress_line::after,
-.progress_line::before {
 	opacity: 0;
-	animation: animate2 1s linear forwards;
-	animation-delay: 1.2s;
+	height: 100%;
+
+	background: rgb(13, 13, 13);
+	background: linear-gradient(
+		90deg,
+		rgba(13, 13, 13, 1) 0%,
+		rgba(4, 170, 109, 1) 100%
+	);
+
+	border-radius: 10px;
+	position: relative;
+	transition: all 1s;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-@keyframes animate2 {
-	100% {
-		opacity: 1;
-	}
+.progress-bar span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
 }
 
 /* About Section End*/
@@ -503,11 +503,19 @@ nav a:hover {
 }
 
 .project-container {
-	padding: 18px;
 	display: grid;
 	gap: 5px;
 	grid-template-columns: repeat(3, 1fr);
-	padding-top: 100px;
+	background-color: #fa8072;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+	padding: 10px;
+	margin-bottom: 10px;
+
+	box-shadow: 10px -10px 3px -5px rgba(0, 0, 0, 0.47);
+	-webkit-box-shadow: 10px -10px 3px -5px rgba(0, 0, 0, 0.47);
+	-moz-box-shadow: 10px -10px 3px -5px rgba(0, 0, 0, 0.47);
 }
 
 .card {
