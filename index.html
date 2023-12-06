@@ -1,348 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-		<link rel="icon" type="image/x-icon" href="/assets/pxArt.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/pxArt.png" />
 
-		<script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-		></script>
-		<script>
-			function sendMail() {
-				var tempParams = {
-					from_name: document.getElementById("name").value,
-					to_name: document.getElementById("email").value,
-					message: document.getElementById("message").value,
-				};
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script>
+      function sendMail() {
+        var tempParams = {
+          from_name: document.getElementById("name").value,
+          to_name: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
 
-				emailjs.send("service_alvmkri", "template_ntbl3qd", tempParams).then(
-					function (response) {
-						console.log("SUCCESS!", response.status, response.text);
-					},
-					function (error) {
-						console.log("FAILED...", error);
-					}
-				);
-			}
-		</script>
+        emailjs.send("service_alvmkri", "template_ntbl3qd", tempParams).then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+      }
+    </script>
 
-		<script type="text/javascript">
-			(function () {
-				emailjs.init("tckFwD3u7saANSQBL");
-			})();
-		</script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("tckFwD3u7saANSQBL");
+      })();
+    </script>
 
-		<title>kaanozen-portfolio</title>
-	</head>
+    <title>kaanozen-portfolio</title>
+  </head>
 
-	<body>
-		<!--Home Section-->
-		<section id="home">
-			<div class="home-container">
-				<div class="pixelCon">
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-					<div class="pixel"></div>
-				</div>
-				<div class="text-box">
-					<h1>
-						Hello, I'm <span class="home-text"></span>
-						<br />
-						I'm a web developer.
-					</h1>
-				</div>
+  <body>
+    <!--Home Section-->
+    <section id="home">
+      <div class="home-container">
+        <div class="pixelCon">
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+        </div>
+        <div class="text-box">
+          <h1>
+            Hello, I'm <span class="home-text"></span>
+            <br />
+            I'm a web developer.
+          </h1>
+        </div>
 
-				<div class="go-nav">
-					<p class="about-me-button">
-						<a href="#about">About Me</a>
-					</p>
-				</div>
-			</div>
-		</section>
-		<!--Home Section End-->
+        <div class="go-nav">
+          <p class="about-me-button">
+            <a href="#about">About Me</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Home Section End-->
 
-		<nav id="main-nav">
-			<a href="#home">Home</a>
-			<a href="#about">About</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">Contact</a>
-		</nav>
+    <nav id="main-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-		<!--About Section-->
-		<section id="about" class="section-container">
-			<div class="section-title">
-				<div>
-					<h1>About</h1>
-					<div class="line line-animation"></div>
-				</div>
-			</div>
+    <!--About Section-->
+    <section id="about" class="section-container">
+      <div class="section-title">
+        <div>
+          <h1>About</h1>
+          <div class="line line-animation"></div>
+        </div>
+      </div>
 
-			<div class="about-body">
-				<div class="about-img">
-					<div class="flip-box">
-						<div class="flip-box-inner">
-							<div class="flip-box-front">
-								<img
-									src="/assets/pxArt.png"
-									alt="Paris"
-									style="width: 300px; height: 300px"
-								/>
-							</div>
-							<div class="flip-box-back">
-								<img
-									src="/assets/kaanImg.png"
-									alt="Paris"
-									style="width: 300px; height: 300px"
-								/>
-							</div>
-						</div>
-					</div>
+      <div class="about-body">
+        <div class="about-img">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img
+                  src="/assets/pxArt.png"
+                  alt="Paris"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+              <div class="flip-box-back">
+                <img
+                  src="/assets/kaanImg.png"
+                  alt="Paris"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+            </div>
+          </div>
 
-					<div class="about-me">
-						<p>
-							First of all, I love to write code. Software development is like a
-							strategy game. Firstly, you need to analyze the resources you
-							have. After that, start developing a project based on these
-							analyzes. I believe in the power of programming to transform and
-							improve the lives of people around the world. I have been
-							developing software using different project for the last 4 years.
-							I am mainly keen width
-							<mark>HTML, CSS, ReactJS, Javascript and Python.</mark> I have
-							basic knowledge <mark>SQL and C#.</mark>
-						</p>
-					</div>
-				</div>
+          <div class="about-me">
+            <p>
+              First of all, I love to write code. Software development is like a
+              strategy game. Firstly, you need to analyze the resources you
+              have. After that, start developing a project based on these
+              analyzes. I believe in the power of programming to transform and
+              improve the lives of people around the world. I have been
+              developing software using different project for the last 4 years.
+              I am mainly keen width
+              <mark>HTML, CSS, ReactJS, Javascript and Python.</mark> I have
+              basic knowledge <mark>SQL and C#.</mark>
+            </p>
+          </div>
+        </div>
 
-				<div id="skills-section">
-					<div class="skill-container">
-						<p>HTML</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="80">
-								<span>80%</span>
-							</div>
-						</div>
+        <div id="skills-section">
+          <div class="skill-container">
+            <p>HTML</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="80">
+                <span>80%</span>
+              </div>
+            </div>
 
-						<p>CSS</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="70">
-								<span>70%</span>
-							</div>
-						</div>
+            <p>CSS</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="70">
+                <span>70%</span>
+              </div>
+            </div>
 
-						<p>Javascript</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="70">
-								<span>70%</span>
-							</div>
-						</div>
+            <p>Javascript</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="70">
+                <span>70%</span>
+              </div>
+            </div>
 
-						<p>ReactJS</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="60">
-								<span>60%</span>
-							</div>
-						</div>
+            <p>ReactJS</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="60">
+                <span>60%</span>
+              </div>
+            </div>
 
-						<p>Python</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="60">
-								<span>60%</span>
-							</div>
-						</div>
+            <p>Python</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="60">
+                <span>60%</span>
+              </div>
+            </div>
 
-						<p>Photoshop</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="60">
-								<span>60%</span>
-							</div>
-						</div>
+            <p>Photoshop</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="60">
+                <span>60%</span>
+              </div>
+            </div>
 
-						<p>Photoshop</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="50">
-								<span>50%</span>
-							</div>
-						</div>
+            <p>Photoshop</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="50">
+                <span>50%</span>
+              </div>
+            </div>
 
-						<p>SQL</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="30">
-								<span>30%</span>
-							</div>
-						</div>
+            <p>SQL</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="30">
+                <span>30%</span>
+              </div>
+            </div>
 
-						<p>C#</p>
-						<div class="progress">
-							<div class="progress-bar" data-progress="30">
-								<span>30%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--About Section End-->
+            <p>C#</p>
+            <div class="progress">
+              <div class="progress-bar" data-progress="30">
+                <span>30%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Section End-->
 
-		<!--Projects Section-->
-		<section id="projects" class="section-container">
-			<div class="section-title">
-				<div>
-					<h1>Projects</h1>
-					<div class="line line-animation"></div>
-				</div>
-			</div>
+    <!--Projects Section-->
+    <section id="projects" class="section-container">
+      <div class="section-title">
+        <div>
+          <h1>Projects</h1>
+          <div class="line line-animation"></div>
+        </div>
+      </div>
 
-			<div class="project-container">
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-				<div class="card">
-					<p>Project1</p>
-					<p class="info-text">Information</p>
-					<button>Learn More</button>
-				</div>
-			</div>
-		</section>
-		<!--Projects Section End-->
+      <div class="project-container">
+        <div class="card project-1">
+          <p>Movie Search App with JS</p>
+          <p class="info-text">
+            This is a simple movie listing application. The user provides the
+            movie they want to watch or add to their watchlist as input to the
+            application. The API used to list the movies in the application is
+            called OMDBApi.
+          </p>
+          <button id="learnMore1">Learn More</button>
+        </div>
 
-		<!--Contacts Section-->
-		<section id="contact" class="section-container">
-			<div class="section-title">
-				<div>
-					<h1>Contact</h1>
-					<div class="line line-animation"></div>
-				</div>
-			</div>
-			<div class="contact-text">
-				<p>
-					Feel free to Contact me by submitting the form below and I will get
-					back to you as soon as possible
-				</p>
-			</div>
+        <div class="card">
+          <p>Project1</p>
+          <p class="info-text">Information</p>
+          <button id="learnMore2">Learn More</button>
+        </div>
+        <div class="card">
+          <p>Project1</p>
+          <p class="info-text">Information</p>
+          <button id="learnMore3">Learn More</button>
+        </div>
+        <div class="card">
+          <p>Project1</p>
+          <p class="info-text">Information</p>
+          <button id="learnMore4">Learn More</button>
+        </div>
+        <div class="card">
+          <p>Project1</p>
+          <p class="info-text">Information</p>
+          <button id="learnMore5">Learn More</button>
+        </div>
+        <div class="card project-6">
+          <p>Color Scheme Generator</p>
+          <p class="info-text">
+            A simple color scheme generator that allows you to search, discover,
+            test and create beautiful color palettes for your projects. It uses
+            an API called The Color API. Based on user inputs, Color API will
+            generate a color scheme for the user.
+          </p>
+          <button id="learnMore6">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <!--Projects Section End-->
 
-			<div class="contact-box">
-				<ul>
-					<form action="">
-						<li>
-							<label for="name">Name</label>
-							<input
-								type="text"
-								id="name"
-								placeholder="Name"
-								required
-								autocomplete="off"
-							/>
-						</li>
-						<li>
-							<label for="email">Email</label>
-							<input
-								type="email"
-								id="email"
-								placeholder="Email"
-								required
-								autocomplete="off"
-							/>
-						</li>
-						<li>
-							<label for="message">Message</label>
-							<textarea
-								id="message"
-								placeholder="Message"
-								id=""
-								cols="30"
-								rows="10"
-								required
-								autocomplete="off"
-							></textarea>
-						</li>
+    <!--Contacts Section-->
+    <section id="contact" class="section-container">
+      <div class="section-title">
+        <div>
+          <h1>Contact</h1>
+          <div class="line line-animation"></div>
+        </div>
+      </div>
+      <div class="contact-text">
+        <p>
+          Feel free to Contact me by submitting the form below and I will get
+          back to you as soon as possible
+        </p>
+      </div>
 
-						<button onclick="sendMail()">Send Email</button>
-					</form>
-				</ul>
-			</div>
-		</section>
-		<!--Contacts Section End-->
+      <div class="contact-box">
+        <ul>
+          <form action="">
+            <li>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Name"
+                required
+                autocomplete="off"
+              />
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+                autocomplete="off"
+              />
+            </li>
+            <li>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Message"
+                id=""
+                cols="30"
+                rows="10"
+                required
+                autocomplete="off"
+              ></textarea>
+            </li>
 
-		<!--Footer Section Start-->
-		<section class="footer">
-			<footer class="footer-container">
-				<div class="footer-body">
-					<div class="footer-text">
-						<h2>Kaan ozen</h2>
-						<p>
-							A Frontend focused Web Developer building the Frontend of Websites
-							and Web Applications that leads to the success of the overall
-							product.
-						</p>
-					</div>
+            <button onclick="sendMail()">Send Email</button>
+          </form>
+        </ul>
+      </div>
+    </section>
+    <!--Contacts Section End-->
 
-					<div class="footer-links">
-						<p>social</p>
-						<div class="footer-logos">
-							<a href="https://www.linkedin.com/in/kaan-ozen/">
-								<img src="/assets/linkedin.svg" alt="" />
-							</a>
-							<a href="https://github.com/KaanOzen-mF">
-								<img src="/assets/github.svg" alt="" />
-							</a>
-						</div>
-					</div>
-				</div>
+    <!--Footer Section Start-->
+    <section class="footer">
+      <footer class="footer-container">
+        <div class="footer-body">
+          <div class="footer-text">
+            <h2>Kaan ozen</h2>
+            <p>
+              A Frontend focused Web Developer building the Frontend of Websites
+              and Web Applications that leads to the success of the overall
+              product.
+            </p>
+          </div>
 
-				<div class="footer-line"></div>
+          <div class="footer-links">
+            <p>social</p>
+            <div class="footer-logos">
+              <a href="https://www.linkedin.com/in/kaan-ozen/">
+                <img src="/assets/linkedin.svg" alt="" />
+              </a>
+              <a href="https://github.com/KaanOzen-mF">
+                <img src="/assets/github.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
 
-				<div class="footer-feet">
-					<p>
-						©Copyright 2022. Made by <span class="name-tag"> Kaan Ozen.</span>
-					</p>
-				</div>
-			</footer>
-		</section>
-		<!--Footer Section End-->
+        <div class="footer-line"></div>
 
-		<script src="index.js"></script>
-	</body>
+        <div class="footer-feet">
+          <p>
+            ©Copyright 2022. Made by <span class="name-tag"> Kaan Ozen.</span>
+          </p>
+        </div>
+      </footer>
+    </section>
+    <!--Footer Section End-->
+
+    <!--Popup Section Start-->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p></p>
+      </div>
+    </div>
+
+    <!--Popup Section End-->
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
