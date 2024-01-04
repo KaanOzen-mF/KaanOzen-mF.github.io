@@ -551,6 +551,14 @@ nav a:hover {
   background-color: #000000;
 }
 
+.project-2 {
+  background-image: url(assets/todoApp.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
 .project-6 {
   background-image: url(assets/colorSchemeGenerator.png);
   background-position: center;
