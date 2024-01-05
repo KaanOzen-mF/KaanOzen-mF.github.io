@@ -837,6 +837,9 @@ button:hover {
   .go-nav {
     padding-top: 40%;
   }
+  .modal-content {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -864,6 +867,9 @@ button:hover {
   .go-nav {
     padding-top: 50%;
   }
+  .modal-content {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -872,7 +878,7 @@ button:hover {
     margin-left: 20px;
   }
   .modal-content {
-    width: 50%;
+    width: 100%;
   }
 }
 
