@@ -8,7 +8,7 @@ export const data = {
   project2: {
     projectName: "Todo App with React",
     github: "https://github.com/KaanOzen-mF/to-do-app",
-    live: "https://to-do-app-flax-iota.vercel.app/",
+    live: "https://to-do-app-kaanozen-mfs-projects.vercel.app/",
   },
   project6: {
     projectName: "Color Scheme Generator",
