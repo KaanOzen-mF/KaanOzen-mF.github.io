@@ -10,6 +10,11 @@ export const data = {
     github: "https://github.com/KaanOzen-mF/to-do-app",
     live: "https://to-do-app-kaanozen-mfs-projects.vercel.app/",
   },
+  project3: {
+    projectName: "Youtube Clone",
+    github: "https://github.com/KaanOzen-mF/youtube-clone",
+    live: "https://ouutubee-clonee.netlify.app/",
+  },
   project6: {
     projectName: "Color Scheme Generator",
     github:
