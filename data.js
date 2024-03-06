@@ -15,6 +15,11 @@ export const data = {
     github: "https://github.com/KaanOzen-mF/youtube-clone",
     live: "https://ouutubee-clonee.netlify.app/",
   },
+  project4: {
+    projectName: "Weather App with React",
+    github: "https://github.com/KaanOzen-mF/weather-api-react-and-ts",
+    live: "https://weather-app-ochre-seven-77.vercel.app/",
+  },
   project6: {
     projectName: "Color Scheme Generator",
     github:
