@@ -22,8 +22,7 @@ export const data = {
   },
   project5: {
     projectName: "Multipage Website with Tailwind and React TS",
-    github:
-      "https://github.com/KaanOzen-mF/multi-page-website?tab=readme-ov-file#overview",
+    github: "https://github.com/KaanOzen-mF/multi-page-website",
     live: "https://multi-page-website-omega.vercel.app/",
   },
   project6: {
