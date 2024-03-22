@@ -560,7 +560,7 @@ nav a:hover {
 }
 
 .project-3 {
-  background-image: url(assets/weatherApp.png);
+  background-image: url(assets/youtube-clone.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -569,6 +569,14 @@ nav a:hover {
 
 .project-4 {
   background-image: url(assets/weatherApp.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
+
+.project-5 {
+  background-image: url(assets/multiPage.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

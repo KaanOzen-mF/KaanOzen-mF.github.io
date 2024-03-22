@@ -20,6 +20,12 @@ export const data = {
     github: "https://github.com/KaanOzen-mF/weather-api-react-and-ts",
     live: "https://weather-app-ochre-seven-77.vercel.app/",
   },
+  project5: {
+    projectName: "Multipage Website with Tailwind and React TS",
+    github:
+      "https://github.com/KaanOzen-mF/multi-page-website?tab=readme-ov-file#overview",
+    live: "https://multi-page-website-omega.vercel.app/",
+  },
   project6: {
     projectName: "Color Scheme Generator",
     github:
