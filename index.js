@@ -131,3 +131,10 @@ window.onclick = function (event) {
   }
 };
 /* Popup Screen Functionalities End */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const yearElement = document.querySelector(".year");
+  const currentYear = new Date().getFullYear();
+  console.log(currentYear);
+  yearElement.textContent = currentYear;
+});
