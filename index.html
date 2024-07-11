@@ -122,19 +122,22 @@
 
           <div class="about-me">
             <p>
-              First of all, I love to write code. Software development is like a
-              strategy game. Firstly, you need to analyze the resources you
-              have. After that, start developing a project based on these
-              analyzes. I believe in the power of programming to transform and
-              improve the lives of people around the world. I have been
-              developing software using different project for the last 4 years.
-              I am mainly keen width
-              <mark>HTML, CSS, ReactJS, Javascript and Python.</mark> I have
-              basic knowledge <mark>SQL and C#.</mark>
+              I am passionate about writing code. To me, software development is
+              like a strategy game. First, you analyze the resources at your
+              disposal. Then, you begin developing a project based on this
+              analysis. I firmly believe in the power of programming to
+              transform and improve lives worldwide. Over the past three years,
+              I have been developing software using various projects. My primary
+              focus is on creating solutions that make a difference.
+              <mark> HTML, CSS, ReactJS and Javascript.</mark> I have also
+              knowledge about<mark> SQL, Python and Java.</mark>
             </p>
           </div>
         </div>
-
+        <div id="skills-section">
+          <canvas id="myChart" width="400" height="40"></canvas>
+        </div>
+        <!--
         <div id="skills-section">
           <div class="skill-container">
             <p>HTML</p>
@@ -201,6 +204,7 @@
             </div>
           </div>
         </div>
+        -->
       </div>
     </section>
     <!--About Section End-->
@@ -368,7 +372,8 @@
 
         <div class="footer-feet">
           <p>
-            ©Copyright 2022. Made by <span class="name-tag"> Kaan Ozen.</span>
+            ©Copyright <span class="year"></span>. Made by
+            <span class="name-tag"> Kaan Ozen.</span>
           </p>
         </div>
       </footer>
@@ -388,5 +393,99 @@
 
     <!--Popup Section End-->
     <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: [
+            "HTML",
+            "CSS",
+            "Photoshop",
+            "ReactJS",
+            "Java",
+            "SQL",
+            "Python",
+            "Figma",
+            "JavaScript",
+          ],
+          datasets: [
+            {
+              label: [],
+              data: [85, 80, 40, 75, 45, 35, 40, 60, 85],
+              fill: true,
+              borderDash: [5, 1],
+              backgroundColor: "rgba(255, 99, 132, 0.2)",
+              borderColor: "rgb(255, 99, 132)",
+              pointBackgroundColor: "rgb(255, 99, 132)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(255, 99, 132)",
+              pointRadius: 5,
+              pointHoverRadius: 10,
+              pointHitRadius: 15,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          elements: {
+            line: {
+              borderWidth: 6,
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+              labels: {
+                font: {
+                  family: "publicPixel",
+                },
+              },
+            },
+            tooltip: {
+              titleFont: {
+                family: "publicPixel",
+                size: 14,
+                style: "normal",
+              },
+              bodyFont: {
+                family: "publicPixel",
+                size: 12,
+                style: "normal",
+              },
+            },
+          },
+          scales: {
+            r: {
+              pointLabels: {
+                font: {
+                  family: "publicPixel",
+                  size: 12,
+                },
+              },
+              ticks: {
+                font: {
+                  family: "publicPixel",
+                  size: 10,
+                },
+                display: false,
+              },
+              grid: {
+                color: "rgba(0, 0, 0, 0.2)",
+                borderDash: [5, 2], 
+                circular: true, 
+              },
+              angleLines: {
+                color: "rgba(0, 0, 0, 0.2)", 
+                borderDash: [5, 2], 
+              },
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
