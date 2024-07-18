@@ -52,7 +52,7 @@ var pix = document.getElementsByClassName("pixel");
 for (var i = 0; i < pix.length; i++) {
   pix[i].style.animationDelay = Math.ceil(Math.random() * 5000) + "ms";
 }
-
+/*
 const skillsSection = document.getElementById("skills-section");
 
 const progressBars = document.querySelectorAll(".progress-bar");
@@ -71,7 +71,7 @@ function hideProgress() {
     p.style.width = 0;
   });
 }
-
+*/
 window.addEventListener("scroll", () => {
   const sectionPos = skillsSection.getBoundingClientRect().top;
   const screenPos = window.innerHeight / 2;
