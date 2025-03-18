@@ -427,6 +427,7 @@ nav a:hover {
 }
 
 .about-me {
+  margin-top: 24px;
   padding: 18px;
   margin-bottom: 20px;
   font-size: 14px;
@@ -547,7 +548,7 @@ nav a:hover {
 }
 
 .project-1 {
-  background-image: url(assets/movieSearchAppJs.png);
+  background-image: url(assets/colorSchemeGenerator.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -555,7 +556,7 @@ nav a:hover {
 }
 
 .project-2 {
-  background-image: url(assets/todoApp.png);
+  background-image: url(assets/multiPage.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -563,7 +564,7 @@ nav a:hover {
 }
 
 .project-3 {
-  background-image: url(assets/youtube-clone.png);
+  background-image: url(assets/todoApp.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -571,7 +572,7 @@ nav a:hover {
 }
 
 .project-4 {
-  background-image: url(assets/weatherApp.png);
+  background-image: url(assets/movieSearchAppJs.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -579,7 +580,7 @@ nav a:hover {
 }
 
 .project-5 {
-  background-image: url(assets/multiPage.png);
+  background-image: url(assets/weatherApp.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -587,7 +588,7 @@ nav a:hover {
 }
 
 .project-6 {
-  background-image: url(assets/colorSchemeGenerator.png);
+  background-image: url(assets/youtube-clone.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
