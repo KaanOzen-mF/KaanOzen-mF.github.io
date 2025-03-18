@@ -1,4 +1,5 @@
-import { data } from "./data.js";
+//import { data } from "./data.js";
+let projectData = [];
 
 let home = document.getElementById("home");
 let navbar = document.getElementById("main-nav");
@@ -72,9 +73,10 @@ function hideProgress() {
   });
 }
 */
+/*
 window.addEventListener("scroll", () => {
-  const sectionPos = skillsSection.getBoundingClientRect().top;
-  const screenPos = window.innerHeight / 2;
+  //const sectionPos = skillsSection.getBoundingClientRect().top;
+  //const screenPos = window.innerHeight / 2;
 
   if (sectionPos < screenPos) {
     showProgress();
@@ -82,6 +84,7 @@ window.addEventListener("scroll", () => {
     hideProgress();
   }
 });
+ */
 
 /* Popup Screen Functionalities Start */
 // Get the modal
@@ -90,23 +93,61 @@ var modal = document.getElementById("myModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Function to open the modal with specific content
-function openModal(projectKey) {
-  // Get the project information based on the project key
-  var projectInfo = data[projectKey];
+function fetchProjects() {
+  fetch("http://82.29.179.243/projects")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      projectData = data;
+      data.sort((a, b) => a.id - b.id);
 
-  // Set the content of the modal dynamically
-  var modalContent = document.querySelector(".modal-content p");
-  modalContent.innerHTML = `
-    <p>Project Name: ${projectInfo.projectName}</p>
-    <p>Github Repo: <a href="${projectInfo.github}">${projectInfo.github}</a></p>
-    <p>Live Link: <a href="${projectInfo.live}">${projectInfo.live}</a></p>
-  `;
+      console.log(process.env.API_URL);
+      const projectsContainer = document.getElementById("project-container");
+      projectsContainer.innerHTML = "";
 
-  // Open the modal
-  modal.style.display = "block";
+      data.forEach((project) => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("card", `project-${project.id}`);
+        projectCard.innerHTML = `
+          <p>${project.projectName}</p>
+          <p class="info-text">${project.projectDesc}</p>
+          <button class="learnMoreBtn" data-project-id="${project.id}">Learn More</button>
+        `;
+        projectsContainer.appendChild(projectCard);
+
+        const learnMoreBtn = projectCard.querySelector(".learnMoreBtn");
+        learnMoreBtn.addEventListener("click", () => {
+          const selectedProject = projectData.find((p) => p.id === project.id);
+          if (selectedProject) {
+            openModal(selectedProject);
+          } else {
+            console.error("Project not found", project.id);
+          }
+        });
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
 
+document.addEventListener("DOMContentLoaded", fetchProjects);
+
+function openModal(project) {
+  const modal = document.querySelector(".modal");
+  const modalContent = document.querySelector(".modal-content p");
+  modalContent.innerHTML = `
+    <p>Project Name: ${project.projectName}</p>
+    <p>Github Repo: <a href="${project.github}" target="_blank">${project.github}</a></p>
+    <p>Project URL: <a href="${project.projectUrl}" target="_blank">${project.projectUrl}</a></p>
+  `;
+  modal.style.display = "block";
+}
+/*
 // Add click event listeners to each "Learn More" button
 for (let i = 1; i <= 6; i++) {
   var btn = document.getElementById(`learnMore${i}`);
@@ -118,6 +159,7 @@ for (let i = 1; i <= 6; i++) {
     openModal(projectKey);
   };
 }
+*/
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
@@ -135,6 +177,5 @@ window.onclick = function (event) {
 document.addEventListener("DOMContentLoaded", function () {
   const yearElement = document.querySelector(".year");
   const currentYear = new Date().getFullYear();
-  console.log(currentYear);
   yearElement.textContent = currentYear;
 });
