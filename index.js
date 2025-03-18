@@ -105,7 +105,6 @@ function fetchProjects() {
       projectData = data;
       data.sort((a, b) => a.id - b.id);
 
-      console.log(process.env.API_URL);
       const projectsContainer = document.getElementById("project-container");
       projectsContainer.innerHTML = "";
 
