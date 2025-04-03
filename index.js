@@ -94,7 +94,7 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 
 function fetchProjects() {
-  fetch("http://82.29.179.243/projects")
+  fetch("https://api.kaanozen.com/projects")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -104,7 +104,7 @@ function fetchProjects() {
     .then((data) => {
       projectData = data;
       data.sort((a, b) => a.id - b.id);
-
+      console.log(data);
       const projectsContainer = document.getElementById("project-container");
       projectsContainer.innerHTML = "";
 
